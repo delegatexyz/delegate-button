@@ -13,7 +13,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property                       | Attribute                  | Description                                     | Type      | Default     |
@@ -28,7 +27,6 @@
 | `theme`                        | `theme`                    | Light or Dark theme                             | `string`  | `'light'`   |
 | `tokenId`                      | `token-id`                 | Filter delegations by tokenId approval          | `string`  | `undefined` |
 
-
 ## Events
 
 | Event          | Description | Type                  |
@@ -36,40 +34,26 @@
 | `buttonClick`  |             | `CustomEvent<string>` |
 | `walletSelect` |             | `CustomEvent<string>` |
 
-
 ## Methods
 
 ### `refresh() => Promise<void>`
 
-
-
 #### Returns
 
 Type: `Promise<void>`
-
-
 
 ### `updateConnectedWallet(newWallet: string) => Promise<void>`
 
-
-
 #### Returns
 
 Type: `Promise<void>`
-
-
 
 ### `updateSelectedWallet(newWallet: string) => Promise<void>`
 
-
-
 #### Returns
 
 Type: `Promise<void>`
 
+---
 
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

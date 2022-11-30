@@ -20,7 +20,8 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "postbuild": "mv -f src/components/delegate-cash-button/readme.md readme.md",
+    "postbuild": "cp src/components/delegate-cash-button/readme.md readme.md && npm run distribute",
+    "distribute": "rm dist/delegate-cash-button/index.esm.js && mv dist/delegate-cash-button/delegate-cash-button.esm.js dist/delegate-cash-button/delegate-cash-button.min.js && cp libraries/vanilla/* dist/delegate-cash-button",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
