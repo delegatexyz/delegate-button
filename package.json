@@ -1,0 +1,47 @@
+{
+  "name": "delegatecash-button",
+  "version": "0.0.1",
+  "description": "Delegate Cash Button",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/delegatecash-button/delegatecash-button.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delegatecash/delegatecash-button.git"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "postbuild": "mv -f src/components/delegate-cash-button/readme.md readme.md",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "format": "prettier --write \"**/*.tsx\" \"**/*.ts\" \"**/*.js\"",
+    "format-check": "prettier --check \"**/*.tsx\" \"**/*.ts\" \"**/*.js\""
+  },
+  "dependencies": {
+    "@stencil/core": "^2.13.0",
+    "@stencil/react-output-target": "^0.3.1",
+    "@stencil/sass": "^2.0.0",
+    "ethers": "^5.7.2"
+  },
+  "devDependencies": {
+    "@stencil-community/postcss": "^2.1.0",
+    "@types/autoprefixer": "^10.2.0",
+    "@types/jest": "^27.0.3",
+    "autoprefixer": "^10.4.13",
+    "jest": "^27.4.5",
+    "jest-cli": "^27.4.5",
+    "puppeteer": "^10.0.0"
+  },
+  "license": "MIT"
+}
