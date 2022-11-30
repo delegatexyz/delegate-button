@@ -1,13 +1,8 @@
 name: Release Web Component
 
-# on:
-#   release:
-#     types: [created]
-
-on:
-  push:
-    branches:
-      - 'main'
+push:
+  branches:
+    - 'main'
 
 jobs:
   build:
@@ -38,4 +33,4 @@ jobs:
         working-directory: ./dist/delegate-cash-button
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: ls
+        run: npm publish
