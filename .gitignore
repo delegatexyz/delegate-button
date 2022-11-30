@@ -2,7 +2,6 @@ dist/
 www/
 loader/
 libraries/react/
-libraries/svelte/
 
 *~
 *.sw[mnpcod]
