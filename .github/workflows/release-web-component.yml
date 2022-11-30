@@ -1,8 +1,9 @@
 name: Release Web Component
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build:
@@ -14,7 +15,7 @@ jobs:
           node-version: 12
       - run: npm ci
 
-  publish-gpr:
+  publish-vanilla:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -31,6 +32,24 @@ jobs:
           npm run build
       - name: Publish
         working-directory: ./dist/components
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npm publish
+
+  publish-svelte:
+    needs: publish-vanilla
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Publish
+        working-directory: ./libraries/svelte
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npm publish

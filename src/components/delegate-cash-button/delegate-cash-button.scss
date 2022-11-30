@@ -1,39 +1,35 @@
-div,
-  span,
-  p,
-  button {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-
-  svg {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-
   .dc {
     display: inline-flex;
     position: relative;
     border-radius: 10px;
 
+    button {
+      font-size: 100%;
+      border: 0;
+    }
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
     &__label_container {
+      font: inherit;
       min-width: 125px;
       text-align: left;
       padding: 0.75rem;
       cursor: pointer;
 
       &__label {
+        margin: 0;
         font-size: 1.25rem;
       }
 
       &__sublabel {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
         font-style: italic;
-        margin-top: 0.1rem;
+        margin: 0;
+        margin-top: 0.2rem;
         opacity: 0.5;
       }
     }
@@ -42,6 +38,7 @@ div,
       display: block;
 
       &__button {
+        border: 0;
         height: 100%;
         padding: 0.5rem;
         font-weight: 500;
