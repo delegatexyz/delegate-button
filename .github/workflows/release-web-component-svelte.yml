@@ -21,4 +21,4 @@ jobs:
         working-directory: ./libraries/svelte
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: ls
+        run: npm publish
