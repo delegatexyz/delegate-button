@@ -1,8 +1,9 @@
 name: Release Web Component
 
-push:
-  branches:
-    - 'main'
+on:
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build:
