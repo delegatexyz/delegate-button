@@ -1,4 +1,4 @@
-# delegate-cash-button
+# delegatecash-button
 
 ## Usage
 

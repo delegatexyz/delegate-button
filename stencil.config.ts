@@ -11,8 +11,10 @@ export const config: Config = {
     //   includeDefineCustomElements: true,
     // }),
     {
-      type: 'dist',
-      esmLoaderPath: '../loader',
+      type: 'dist-custom-elements',
+      externalRuntime: false,
+      generateTypeDeclarations: true,
+      autoDefineCustomElements: true
     },
     {
       type: 'www',
