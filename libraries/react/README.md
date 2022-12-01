@@ -1,10 +1,10 @@
-# delegatecash-button-svelte
+# delegatecash-button-react
 
 ## Usage
 
 ```
 <script>
-  import DelegateCashButton from "delegatecash-button-svelte";
+  import DelegateCashButton from "delegatecash-button-react";
 </script>
 
 <DelegateCashButton
@@ -12,8 +12,8 @@
   connectedWallet="0x0000000000000000000000000000000000000001"
   rpcUrl="https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
   rounded={true}
-  on:buttonClick={event => console.log(event.detail)}
-  on:walletSelect={event => console.log(event.detail)}
+  onButtonClick={event => console.log(event.detail)}
+  onWalletSelect={event => console.log(event.detail)}
 />
 ```
 
@@ -37,4 +37,4 @@
 | Event          | Description | Type                  |
 | -------------- | ----------- | --------------------- |
 | `buttonClick`  |             | `CustomEvent<string>` |
-| `walletSelect` |             | `Cust
+| `walletSelect` |             | `CustomEvent<string>` |

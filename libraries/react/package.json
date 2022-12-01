@@ -1,0 +1,56 @@
+{
+  "name": "delegatecash-button-react",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files",
+    "postbuild": "cp README.md dist && cp package.json dist",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "main": "DelegateCashButton.js",
+  "keywords": [
+    "delegate.cash",
+    "delegate cash",
+    "delegate"
+  ],
+  "author": "delegatecash",
+  "license": "MIT",
+  "homepage": "https://delegate.cash",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delegatecash/delegatecash-button.git"
+  },
+  "babel": { 
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "delegatecash-button": "^0.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/preset-react": "^7.18.6"
+  }
+}
