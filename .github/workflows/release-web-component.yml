@@ -74,4 +74,4 @@ jobs:
           npm ci
           npm run build
           cd dist
-          ls
+          npm publish
