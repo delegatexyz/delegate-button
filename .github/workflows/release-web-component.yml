@@ -15,8 +15,47 @@ jobs:
           node-version: 12
       - run: npm ci
 
-  publish-vanilla:
-    needs: build
+  # publish-vanilla:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     packages: write
+  #     contents: read
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '16.x'
+  #         registry-url: 'https://registry.npmjs.org'
+  #     - run: |
+  #         npm ci
+  #         npm run build
+  #     - name: Publish
+  #       working-directory: ./dist/components
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  #       run: npm publish
+
+  # publish-svelte:
+  #   needs: publish-vanilla
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     packages: write
+  #     contents: read
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '16.x'
+  #         registry-url: 'https://registry.npmjs.org'
+  #     - name: Publish
+  #       working-directory: ./libraries/svelte
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+  #       run: npm publish
+
+  publish-react:
+    # needs: publish-vanilla
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -27,29 +66,12 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: |
+      - name: Publish
+        working-directory: ./libraries/react
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: |
           npm ci
           npm run build
-      - name: Publish
-        working-directory: ./dist/components
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: npm publish
-
-  publish-svelte:
-    needs: publish-vanilla
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
-      - name: Publish
-        working-directory: ./libraries/svelte
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        run: npm publish
+          cd dist
+          ls
