@@ -1,4 +1,4 @@
-name: Release Web Component
+name: Release Svelte
 
 on:
   workflow_dispatch:

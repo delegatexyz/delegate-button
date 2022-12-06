@@ -1,4 +1,4 @@
-name: Release Web Component
+name: Release React
 
 on:
   workflow_dispatch:
