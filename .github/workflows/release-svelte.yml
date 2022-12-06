@@ -1,21 +1,10 @@
 name: Release Web Component
 
 on:
-  release:
-    types: [created]
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 12
-      - run: npm ci
-
-  publish-vanilla:
-    needs: build
+  publish-svelte:
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -26,11 +15,8 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: |
-          npm ci
-          npm run build
       - name: Publish
-        working-directory: ./dist/components
+        working-directory: ./libraries/svelte
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npm publish

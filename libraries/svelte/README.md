@@ -1,8 +1,12 @@
-# delegatecash-button-svelte
+# [delegatecash-button-svelte](https://delegate.cash) &middot; ![NPM](https://img.shields.io/npm/l/delegatecash-button-svelte?registry_uri=https%3A%2F%2Fregistry.npmjs.com) ![npm (tag)](https://img.shields.io/npm/v/delegatecash-button-svelte/latest) ![npm bundle size](https://img.shields.io/bundlephobia/min/delegatecash-button-svelte) [![Twitter URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fdelegatecash)](https://twitter.com/delegatecash)
 
-## Usage
+This library is a UI component that when given a connected wallet and an rpc network, it will generate a pre-made UI component that allows you to select your delegated vaults from the [delegate.cash](https://delegate.cash) Relegation Registry.
 
-```
+### Usage Examples
+
+[Javascript](https://github.com/delegatecash/delegatecash-button/tree/main/libraries/vanilla) | [React](https://github.com/delegatecash/delegatecash-button/tree/main/libraries/react) | Svelte
+
+```svelte
 <script>
   import DelegateCashButton from "delegatecash-button-svelte";
 </script>
@@ -22,19 +26,18 @@
 | Property                       | Description                                     | Type      | Default     |
 | ------------------------------ | ----------------------------------------------- | --------- | ----------- |
 | `connectedWallet` _(required)_ | The current connected wallet                    | `string`  | `undefined` |
+| `rpcUrl` _(required)_          | The rpc url of the network you want to use      | `string`  | `undefined` |
+| `label` _(required)_           | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
 | `contract`                     | Filter delegations by contract approval         | `string`  | `undefined` |
+| `tokenId`                      | Filter delegations by tokenId approval          | `string`  | `undefined` |
 | `defaultWalletSelection`       | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
 | `forceDropdown`                | Force dropdown to be open                       | `boolean` | `false`     |
-| `label` _(required)_           | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
 | `rounded`                      | If you want rounded corners                     | `boolean` | `false`     |
-| `rpcUrl` _(required)_          | The rpc url of the network you want to use      | `string`  | `undefined` |
 | `theme`                        | Light or Dark theme                             | `string`  | `'light'`   |
-| `tokenId`                      | Filter delegations by tokenId approval          | `string`  | `undefined` |
-
 
 ## Events
 
-| Event          | Description | Type                  |
-| -------------- | ----------- | --------------------- |
-| `buttonClick`  |             | `CustomEvent<string>` |
-| `walletSelect` |             | `Cust
+| Event          | Description                                 | Type                  |
+| -------------- | ------------------------------------------- | --------------------- |
+| `buttonClick`  | When the main button is clicked             | `CustomEvent<string>` |
+| `walletSelect` | When a wallet is selected from the dropdown | `CustomEvent<string>` |

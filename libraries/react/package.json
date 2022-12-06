@@ -1,6 +1,6 @@
 {
   "name": "delegatecash-button-react",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files",
@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/delegatecash/delegatecash-button.git"
   },
-  "babel": { 
+  "babel": {
     "presets": [
       "@babel/preset-react"
     ]
@@ -45,9 +45,10 @@
     ]
   },
   "dependencies": {
-    "delegatecash-button": "^0.0.3",
+    "delegatecash-button": "^0.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",

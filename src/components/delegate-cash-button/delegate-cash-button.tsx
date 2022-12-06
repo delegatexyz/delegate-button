@@ -102,7 +102,7 @@ export class DelecateCashButton {
 
   private addClasses() {
     const classList = ['dc'];
-    const dc = this.host.firstChild as HTMLElement;
+    const dc = this.host.children.item(0);
 
     if (dc) {
 
