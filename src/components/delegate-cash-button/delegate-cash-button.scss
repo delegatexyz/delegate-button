@@ -79,6 +79,10 @@
       }
     }
 
+    .dc__dropdown__item {
+      text-align:left;
+    }
+
     &.dc_theme__light {
       .dc__label_container {
         background-color: #fff;
@@ -102,7 +106,6 @@
         border-top: 1px solid #e5e7eb;
 
         &__item {
-          text-align: left;
           border-bottom: 1px solid #e5e7eb;
           &:hover {
             background-color: #fafafb;
