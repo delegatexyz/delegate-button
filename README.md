@@ -1,6 +1,6 @@
 # [delegatecash-button](https://delegate.cash) &middot; ![NPM](https://img.shields.io/npm/l/delegatecash-button?registry_uri=https%3A%2F%2Fregistry.npmjs.com) ![npm (tag)](https://img.shields.io/npm/v/delegatecash-button/latest) ![npm bundle size](https://img.shields.io/bundlephobia/min/delegatecash-button) [![Twitter URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fdelegatecash)](https://twitter.com/delegatecash)
 
-This library is a UI component that when given a connected wallet and an rpc network, it will generate a pre-made UI component that allows you to select your delegated vaults from the [delegate.cash](https://delegate.cash) Relegation Registry.
+This library is a web component with various framework wrappers that, when given a connected wallet and an rpc network, will generate a pre-made UI component that allows you to select your delegated vaults from the [delegate.cash](https://delegate.cash) Relegation Registry.
 
 ### Usage Examples
 
