@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "distribute": "cp src/components/delegate-cash-button/readme.md readme.md && npm run distribute",
+    "postbuild": "rm dist/components/index.js && rm dist/components/index.d.ts && cp libraries/vanilla/* dist/components",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
