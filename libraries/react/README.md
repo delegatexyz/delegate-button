@@ -1,20 +1,26 @@
-# delegatecash-button-react
+# [delegatecash-button-react](https://delegate.cash) &middot; ![NPM](https://img.shields.io/npm/l/delegatecash-button-react?registry_uri=https%3A%2F%2Fregistry.npmjs.com) ![npm (tag)](https://img.shields.io/npm/v/delegatecash-button-react/latest) ![npm bundle size](https://img.shields.io/bundlephobia/min/delegatecash-button-react) [![Twitter URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fdelegatecash)](https://twitter.com/delegatecash)
 
-## Usage
+This library is a UI component that when given a connected wallet and an rpc network, it will generate a pre-made UI component that allows you to select your delegated vaults from the [delegate.cash](https://delegate.cash) Relegation Registry.
 
-```
-<script>
-  import DelegateCashButton from "delegatecash-button-react";
-</script>
+### Usage Examples
 
-<DelegateCashButton
-  label="Purchase"
-  connectedWallet="0x0000000000000000000000000000000000000001"
-  rpcUrl="https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
-  rounded={true}
-  onButtonClick={event => console.log(event.detail)}
-  onWalletSelect={event => console.log(event.detail)}
-/>
+[Javascript](https://github.com/delegatecash/delegatecash-button/tree/main/libraries/vanilla) | React | [Svelte](https://github.com/delegatecash/delegatecash-button/tree/main/libraries/svelte)
+
+```jsx
+import DelegateCashButton from 'delegatecash-button-react';
+
+function Example() {
+  return (
+    <DelegateCashButton
+      label="Mint"
+      connectedWallet="0x0000000000000000000000000000000000000001"
+      rpcUrl="https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+      rounded={true}
+      onButtonClick={event => console.log(event.detail)}
+      onWalletSelect={event => console.log(event.detail)}
+    />
+  );
+}
 ```
 
 ## Properties
@@ -22,19 +28,18 @@
 | Property                       | Description                                     | Type      | Default     |
 | ------------------------------ | ----------------------------------------------- | --------- | ----------- |
 | `connectedWallet` _(required)_ | The current connected wallet                    | `string`  | `undefined` |
+| `rpcUrl` _(required)_          | The rpc url of the network you want to use      | `string`  | `undefined` |
+| `label` _(required)_           | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
 | `contract`                     | Filter delegations by contract approval         | `string`  | `undefined` |
+| `tokenId`                      | Filter delegations by tokenId approval          | `string`  | `undefined` |
 | `defaultWalletSelection`       | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
 | `forceDropdown`                | Force dropdown to be open                       | `boolean` | `false`     |
-| `label` _(required)_           | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
 | `rounded`                      | If you want rounded corners                     | `boolean` | `false`     |
-| `rpcUrl` _(required)_          | The rpc url of the network you want to use      | `string`  | `undefined` |
 | `theme`                        | Light or Dark theme                             | `string`  | `'light'`   |
-| `tokenId`                      | Filter delegations by tokenId approval          | `string`  | `undefined` |
-
 
 ## Events
 
-| Event          | Description | Type                  |
-| -------------- | ----------- | --------------------- |
-| `buttonClick`  |             | `CustomEvent<string>` |
-| `walletSelect` |             | `CustomEvent<string>` |
+| Event          | Description                                 | Type                  |
+| -------------- | ------------------------------------------- | --------------------- |
+| `buttonClick`  | When the main button is clicked             | `CustomEvent<string>` |
+| `walletSelect` | When a wallet is selected from the dropdown | `CustomEvent<string>` |

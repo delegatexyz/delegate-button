@@ -1,6 +1,6 @@
 {
   "name": "delegatecash-button",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "description": "Delegate Cash Button",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -20,8 +20,7 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "postbuild": "cp src/components/delegate-cash-button/readme.md readme.md && npm run distribute",
-    "distribute": "rm dist/components/index.js && rm dist/components/index.d.ts && cp libraries/vanilla/* dist/components",
+    "postbuild": "rm dist/components/index.js && rm dist/components/index.d.ts && cp libraries/vanilla/* dist/components",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
