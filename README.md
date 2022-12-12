@@ -13,7 +13,7 @@ This library is a web component with various framework wrappers that, when given
 | `rpcUrl` _(required)_    | `rpc-url`                  | The rpc url of the network you want to use      | `string`  | `undefined` |
 | `connectedWallet`        | `connected-wallet`         | The current connected wallet                    | `string`  | `undefined` |
 | `label`                  | `label`                    | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
-| `disabled`               | `disabled`                 | Whether the main button is disabled or not      | `boolean` | `undefined` |
+| `disabled`               | `disabled`                 | Whether the main button is disabled or not      | `boolean` | `false`     |
 | `contract`               | `contract`                 | Filter delegations by contract approval         | `string`  | `undefined` |
 | `tokenId`                | `token-id`                 | Filter delegations by tokenId approval          | `string`  | `undefined` |
 | `defaultWalletSelection` | `default-wallet-selection` | Auto-select a vault instead of connected wallet | `string`  | `undefined` |

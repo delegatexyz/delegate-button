@@ -32,7 +32,7 @@ Javascript | [React](https://github.com/delegatecash/delegatecash-button/tree/ma
 | `rpc-url` _(required)_     | The rpc url of the network you want to use      | `string`  | `undefined` |
 | `connected-wallet`         | The current connected wallet                    | `string`  | `undefined` |
 | `label`                    | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
-| `disabled`                 | Whether the main button is disabled or not      | `boolean` | `undefined` |
+| `disabled`                 | Whether the main button is disabled or not      | `boolean` | `false`     |
 | `contract`                 | Filter delegations by contract approval         | `string`  | `undefined` |
 | `token-id`                 | Filter delegations by tokenId approval          | `string`  | `undefined` |
 | `default-wallet-welection` | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
