@@ -107,7 +107,7 @@
 
     &.dc_theme__light {
       .dc__label_container {
-        color: var(--dc-theme-dark-label-color, #000);
+        color: var(--dc-theme-light-label-color, #000);
         background-color: var(--dc-theme-light-bg-color, #fff);
         &:hover {
           background-color: var(--dc-theme-light-bg-color-hover,#fafafb);
