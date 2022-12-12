@@ -1,6 +1,6 @@
 {
   "name": "delegatecash-button-react",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files",
