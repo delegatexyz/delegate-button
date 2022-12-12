@@ -16,9 +16,17 @@ export namespace Components {
          */
         "contract": string;
         /**
+          * Default text if there is no connected wallet
+         */
+        "defaultNoWalletLabel": string;
+        /**
           * Auto-select a vault instead of connected wallet
          */
         "defaultWalletSelection": string;
+        /**
+          * Whether the button is disabled or not
+         */
+        "disabled": boolean;
         /**
           * Force dropdown to be open
          */
@@ -68,15 +76,23 @@ declare namespace LocalJSX {
         /**
           * The current connected wallet
          */
-        "connectedWallet": string;
+        "connectedWallet"?: string;
         /**
           * Filter delegations by contract approval
          */
         "contract"?: string;
         /**
+          * Default text if there is no connected wallet
+         */
+        "defaultNoWalletLabel"?: string;
+        /**
           * Auto-select a vault instead of connected wallet
          */
         "defaultWalletSelection"?: string;
+        /**
+          * Whether the button is disabled or not
+         */
+        "disabled"?: boolean;
         /**
           * Force dropdown to be open
          */
@@ -84,7 +100,7 @@ declare namespace LocalJSX {
         /**
           * The main label (eg. "Mint", "Purchase")
          */
-        "label": string;
+        "label"?: string;
         "onButtonClick"?: (event: DelegateCashButtonCustomEvent<string>) => void;
         "onWalletSelect"?: (event: DelegateCashButtonCustomEvent<string>) => void;
         /**
