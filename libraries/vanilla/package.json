@@ -1,6 +1,6 @@
 {
   "name": "delegatecash-button",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Delegate cash button",
   "main": "delegate-cash-button.js",
   "types": "delegate-cash-button.d.ts",
