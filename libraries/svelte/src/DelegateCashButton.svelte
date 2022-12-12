@@ -4,10 +4,11 @@
 
   const dispatch = createEventDispatcher();
 
-  export let label;
-  export let connectedWallet;
   export let rpcUrl;
 
+  export let label = undefined;
+  export let connectedWallet = undefined;
+  export let disabled = false;
   export let defaultWalletSelection = undefined;
   export let contract = undefined;
   export let tokenId = undefined;
@@ -18,11 +19,12 @@
   
 </script>
 
-{#if label && connectedWallet && rpcUrl}
+{#if rpcUrl}
   <delegate-cash-button 
     label={label}
     connected-wallet={connectedWallet}
     rpc-url={rpcUrl} 
+    disabled={disabled}
     default-wallet-selection={defaultWalletSelection}
     contract={contract}
     token-id={tokenId}

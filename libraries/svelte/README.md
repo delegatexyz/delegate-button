@@ -23,17 +23,18 @@ This library is a component that, when given a connected wallet and an rpc netwo
 
 ## Properties
 
-| Property                       | Description                                     | Type      | Default     |
-| ------------------------------ | ----------------------------------------------- | --------- | ----------- |
-| `connectedWallet` _(required)_ | The current connected wallet                    | `string`  | `undefined` |
-| `rpcUrl` _(required)_          | The rpc url of the network you want to use      | `string`  | `undefined` |
-| `label` _(required)_           | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
-| `contract`                     | Filter delegations by contract approval         | `string`  | `undefined` |
-| `tokenId`                      | Filter delegations by tokenId approval          | `string`  | `undefined` |
-| `defaultWalletSelection`       | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
-| `forceDropdown`                | Force dropdown to be open                       | `boolean` | `false`     |
-| `rounded`                      | If you want rounded corners                     | `boolean` | `false`     |
-| `theme`                        | Light or Dark theme                             | `string`  | `'light'`   |
+| Property                 | Description                                     | Type      | Default     |
+| ------------------------ | ----------------------------------------------- | --------- | ----------- |
+| `rpcUrl` _(required)_    | The rpc url of the network you want to use      | `string`  | `undefined` |
+| `connectedWallet`        | The current connected wallet                    | `string`  | `undefined` |
+| `label`                  | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
+| `disabled`               | Whether the main button is disabled or not      | `boolean` | `undefined` |
+| `contract`               | Filter delegations by contract approval         | `string`  | `undefined` |
+| `tokenId`                | Filter delegations by tokenId approval          | `string`  | `undefined` |
+| `defaultWalletSelection` | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
+| `forceDropdown`          | Force dropdown to be open                       | `boolean` | `false`     |
+| `rounded`                | If you want rounded corners                     | `boolean` | `false`     |
+| `theme`                  | Light or Dark theme                             | `string`  | `'light'`   |
 
 ## Events
 

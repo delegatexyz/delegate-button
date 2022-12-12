@@ -35,6 +35,6 @@
     "vite": "^3.2.3"
   },
   "dependencies": {
-    "delegatecash-button": "^0.1.1"
+    "delegatecash-button": "^0.1.4"
   }
 }

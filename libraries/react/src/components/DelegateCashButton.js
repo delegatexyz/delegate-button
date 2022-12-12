@@ -9,6 +9,7 @@ const DelegateCashButton = (props) => {
     connectedWallet, 
     rpcUrl, 
     defaultWalletSelection, 
+    disabled,
     contract, 
     tokenId, 
     theme, 
@@ -36,6 +37,7 @@ const DelegateCashButton = (props) => {
     <delegate-cash-button 
       ref={ref}
       label={label}
+      disabled={disabled}
       connected-wallet={connectedWallet}
       rpc-url={rpcUrl} 
       default-wallet-selection={defaultWalletSelection}
