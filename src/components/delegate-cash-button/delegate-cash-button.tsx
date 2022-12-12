@@ -10,9 +10,9 @@ export class DelecateCashButton {
   @Element() host: HTMLElement;
 
   /** The main label (eg. "Mint", "Purchase") */
-  @Prop() label!: string;
+  @Prop() label: string;
   /** The current connected wallet */
-  @Prop() connectedWallet!: string;
+  @Prop() connectedWallet: string;
   /** The rpc url of the network you want to use */
   @Prop() rpcUrl!: string;
   /** Auto-select a vault instead of connected wallet */
@@ -21,8 +21,12 @@ export class DelecateCashButton {
   @Prop() contract: string;
   /** Filter delegations by tokenId approval */
   @Prop() tokenId: string;
+  /** Whether the button is disabled or not */
+  @Prop() disabled: boolean;
   /** Light or Dark theme */
   @Prop() theme: 'light' | 'dark' | string = 'light';
+   /** Default text if there is no connected wallet */
+   @Prop() defaultNoWalletLabel: string = "Connect Wallet";
   /** If you want rounded corners */
   @Prop() rounded: boolean = false;
   /** Force dropdown to be open */
@@ -106,13 +110,17 @@ export class DelecateCashButton {
 
     if (dc) {
 
+      if(this.disabled) classList.push('dc__disabled');
+
       if (this.theme === 'light') classList.push('dc_theme__light');
 
       if (this.theme === 'dark') classList.push('dc_theme__dark');
 
       if (this.rounded) classList.push('dc_style__rounded');
 
-      if (this.delegations.length === 0) classList.push('dc_no_delegations');
+      if (this.delegations.length === 0 || this.disabled) classList.push('dc_no_delegations');
+
+      if (!this.label) classList.push('dc_no_label');
 
       if (this.showDropdown || this.forceDropdown) {
         classList.push('dc_dropdown_active');
@@ -131,14 +139,13 @@ export class DelecateCashButton {
           class="dc__label_container"
           onClick={() => this.buttonClickHandler(this.selectedWallet)}
         >
-          <p class="dc__label_container__label">{this.label}</p>
-          {this.delegations.length ? (
-            <p class="dc__label_container__sublabel">{truncateWallet(this.selectedWallet)}</p>
-          ) : (
-            ''
-          )}
+          {this.label ? <p class="dc__label_container__label">{this.label}</p> : ""}
+          <p class="dc__label_container__sublabel">
+            {this.selectedWallet !== this.connectedWallet ? <img src="https://delegate.cash/images/mediakit/logo.png" /> : ""}
+            { this.connectedWallet ? this.delegations.length ? truncateWallet(this.selectedWallet) : truncateWallet(this.connectedWallet) : this.defaultNoWalletLabel }
+          </p>
         </button>
-        {this.delegations.length > 0 ? (
+        {this.delegations.length > 0 && !this.disabled ? (
           <div class="dc__arrow" onClick={() => (this.showDropdown = !this.showDropdown)}>
             <button class="dc__arrow__button">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true">
@@ -174,6 +181,7 @@ export class DelecateCashButton {
                       this.walletSelectHandler(delegate);
                     }}
                   >
+                    {delegate !== this.connectedWallet ? <img src="https://delegate.cash/images/mediakit/logo.png" /> : ""}
                     {truncateWallet(delegate, 7, 7)}
                   </div>
                 ))}

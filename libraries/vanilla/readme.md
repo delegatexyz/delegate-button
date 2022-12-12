@@ -27,17 +27,18 @@ Javascript | [React](https://github.com/delegatecash/delegatecash-button/tree/ma
 
 ## Properties
 
-| Property                        | Description                                     | Type      | Default     |
-| ------------------------------- | ----------------------------------------------- | --------- | ----------- |
-| `connected-wallet` _(required)_ | The current connected wallet                    | `string`  | `undefined` |
-| `rpc-url` _(required)_          | The rpc url of the network you want to use      | `string`  | `undefined` |
-| `label` _(required)_            | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
-| `contract`                      | Filter delegations by contract approval         | `string`  | `undefined` |
-| `token-id`                      | Filter delegations by tokenId approval          | `string`  | `undefined` |
-| `default-wallet-welection`      | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
-| `force-dropdown`                | Force dropdown to be open                       | `boolean` | `false`     |
-| `rounded`                       | If you want rounded corners                     | `boolean` | `false`     |
-| `theme`                         | Light or Dark theme                             | `string`  | `'light'`   |
+| Property                   | Description                                     | Type      | Default     |
+| -------------------------- | ----------------------------------------------- | --------- | ----------- |
+| `rpc-url` _(required)_     | The rpc url of the network you want to use      | `string`  | `undefined` |
+| `connected-wallet`         | The current connected wallet                    | `string`  | `undefined` |
+| `label`                    | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
+| `disabled`                 | Whether the main button is disabled or not      | `boolean` | `undefined` |
+| `contract`                 | Filter delegations by contract approval         | `string`  | `undefined` |
+| `token-id`                 | Filter delegations by tokenId approval          | `string`  | `undefined` |
+| `default-wallet-welection` | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
+| `force-dropdown`           | Force dropdown to be open                       | `boolean` | `false`     |
+| `rounded`                  | If you want rounded corners                     | `boolean` | `false`     |
+| `theme`                    | Light or Dark theme                             | `string`  | `'light'`   |
 
 ## Events
 

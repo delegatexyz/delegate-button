@@ -8,17 +8,18 @@ This library is a web component with various framework wrappers that, when given
 
 ## Properties
 
-| Property                       | Attribute                  | Description                                     | Type      | Default     |
-| ------------------------------ | -------------------------- | ----------------------------------------------- | --------- | ----------- |
-| `connectedWallet` _(required)_ | `connected-wallet`         | The current connected wallet                    | `string`  | `undefined` |
-| `rpcUrl` _(required)_          | `rpc-url`                  | The rpc url of the network you want to use      | `string`  | `undefined` |
-| `label` _(required)_           | `label`                    | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
-| `contract`                     | `contract`                 | Filter delegations by contract approval         | `string`  | `undefined` |
-| `tokenId`                      | `token-id`                 | Filter delegations by tokenId approval          | `string`  | `undefined` |
-| `defaultWalletSelection`       | `default-wallet-selection` | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
-| `forceDropdown`                | `force-dropdown`           | Force dropdown to be open                       | `boolean` | `false`     |
-| `rounded`                      | `rounded`                  | If you want rounded corners                     | `boolean` | `false`     |
-| `theme`                        | `theme`                    | Light or Dark theme                             | `string`  | `'light'`   |
+| Property                 | Attribute                  | Description                                     | Type      | Default     |
+| ------------------------ | -------------------------- | ----------------------------------------------- | --------- | ----------- |
+| `rpcUrl` _(required)_    | `rpc-url`                  | The rpc url of the network you want to use      | `string`  | `undefined` |
+| `connectedWallet`        | `connected-wallet`         | The current connected wallet                    | `string`  | `undefined` |
+| `label`                  | `label`                    | The main label (eg. "Mint", "Purchase")         | `string`  | `undefined` |
+| `disabled`               | `disabled`                 | Whether the main button is disabled or not      | `boolean` | `undefined` |
+| `contract`               | `contract`                 | Filter delegations by contract approval         | `string`  | `undefined` |
+| `tokenId`                | `token-id`                 | Filter delegations by tokenId approval          | `string`  | `undefined` |
+| `defaultWalletSelection` | `default-wallet-selection` | Auto-select a vault instead of connected wallet | `string`  | `undefined` |
+| `forceDropdown`          | `force-dropdown`           | Force dropdown to be open                       | `boolean` | `false`     |
+| `rounded`                | `rounded`                  | If you want rounded corners                     | `boolean` | `false`     |
+| `theme`                  | `theme`                    | Light or Dark theme                             | `string`  | `'light'`   |
 
 ## Events
 
