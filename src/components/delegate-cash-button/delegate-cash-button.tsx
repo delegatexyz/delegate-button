@@ -25,8 +25,8 @@ export class DelecateCashButton {
   @Prop() disabled: boolean;
   /** Light or Dark theme */
   @Prop() theme: 'light' | 'dark' | string = 'light';
-   /** Default text if there is no connected wallet */
-   @Prop() defaultNoWalletLabel: string = "Connect Wallet";
+  /** Default text if there is no connected wallet */
+  @Prop() defaultNoWalletLabel: string = "Connect Wallet";
   /** If you want rounded corners */
   @Prop() rounded: boolean = false;
   /** Force dropdown to be open */
