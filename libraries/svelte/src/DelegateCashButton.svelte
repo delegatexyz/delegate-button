@@ -10,6 +10,7 @@
   export let connectedWallet = undefined;
   export let disabled = false;
   export let defaultWalletSelection = undefined;
+  export let defaultNoWalletLabel = undefined;
   export let contract = undefined;
   export let tokenId = undefined;
 
@@ -26,6 +27,7 @@
     rpc-url={rpcUrl} 
     disabled={disabled}
     default-wallet-selection={defaultWalletSelection}
+    default-no-wallet-label={defaultNoWalletLabel}
     contract={contract}
     token-id={tokenId}
     theme={theme}
