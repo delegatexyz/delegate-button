@@ -21,7 +21,8 @@ const DelegateCashButton = (props) => {
   } = props;
 
   useEffect(() => {
-
+    if(!ref) return;
+    
     const handleButtonClick = event => onButtonClick(event);
     const handleWalletSelect = event => onWalletSelect(event);
 
@@ -33,7 +34,7 @@ const DelegateCashButton = (props) => {
       element.removeEventListener('walletSelect', handleWalletSelect);
     };
   });
-
+  
   return(
     <delegate-cash-button 
       ref={ref}
